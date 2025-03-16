@@ -1,0 +1,21 @@
+Array
+(
+    [_token] => ftH6MbJ3xQ4zmUgUPFnHnM1OCfPhcAhojD5AcHA5
+    [_previous] => Array
+        (
+            [url] => http://127.0.0.1:8000/books/24/reviews/create
+        )
+
+    [_flash] => Array
+        (
+            [old] => Array
+                (
+                )
+
+            [new] => Array
+                (
+                )
+
+        )
+
+)
