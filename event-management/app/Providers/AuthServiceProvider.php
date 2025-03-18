@@ -23,7 +23,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define("update-event", function($user, Event $event){
-            file_put_contents(public_path()."/test.log",print_r([$user->id,$event->user_id,'22'],true));
+            //file_put_contents(public_path()."/test.log",print_r([$user->id,$event->user_id,'22'],true));
             return $user->id === $event->user_id;
         });
 

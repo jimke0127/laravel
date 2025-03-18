@@ -22,7 +22,11 @@ class EventController extends BaseController
 
     public function __construct()
     {
+        //必须登录才可以访问，除了index页和show页
         $this->middleware("auth:sanctum")->except(["index","show"]);
+        //限制每分钟这个用户只能访问60次
+        $this->middleware("throttle:60,1")->only(["store","update","destroy"]);
+        //使用策略控制这个类中的方法访问权限 App\Policies\EventPolicy.php
         $this->authorizeResource(Event::class, 'event');
     }
     /**
